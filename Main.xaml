@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -25,6 +25,20 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -54,14 +68,76 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="970,824.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1156,915" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,113" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Hello World!" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="483,122" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Hello World!" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Prévisions météo agricole des agriculteurs Paris - 75001 - Pleinchamp" sap:VirtualizedContainerService.HintSize="483,770" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="ed546627-931c-4cc5-bfc9-b15d4ca371f8" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Faire" sap:VirtualizedContainerService.HintSize="416,530" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT meteo-city-autoco…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="ed546627-931c-4cc5-bfc9-b15d4ca371f8" Text="Paris" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.pleinchamp.com/meteo/36-heures/75001-paris" CVScreenId="8569909c-9e55-40f4-b851-ba445485a7ea" CvElementArea="446, 402, 286, 66" CvType="InputBox" DesignTimeRectangle="473, 421, 208, 28" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='meteo-city-autocomplete-input-with-city' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='meteo-city-autocomplete-input-with-city' tag='INPUT' type='text' class='small' placeholder='Localité, code postal...' aaname='' /&gt;" Guid="5c68a397-d3f7-4d91-94e2-56e13f8a6086" InformativeScreenshot="0baacbfb092744877f1291c1205a22d2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Prévisions météo agricole des agriculteurs Paris - 75001 - Pleinchamp' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NGetText DisplayName="Get Text 'Paris (75001)'" sap:VirtualizedContainerService.HintSize="382,182" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="ed546627-931c-4cc5-bfc9-b15d4ca371f8" TextString="[City]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.pleinchamp.com/meteo/36-heures/75001-paris" CVScreenId="8569909c-9e55-40f4-b851-ba445485a7ea" CvTextArea="447, 492, 245, 12" CvType="AnyWordGroup" DesignTimeRectangle="473, 491, 354, 26" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;p' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='P' class='typography small dark text-left' /&gt;" Guid="127fe489-ca64-4500-9aa9-9db51616d7b5" InformativeScreenshot="e7a3eb244d7e850a995742c23fb27a1a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Prévisions météo agricole des agriculteurs Paris - 75001 - Pleinchamp' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="8569909c-9e55-40f4-b851-ba445485a7ea" CvElementArea="446, 402, 286, 66" CvType="InputBox" DesignTimeRectangle="473, 421, 208, 28" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='meteo-city-autocomplete-input-with-city' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='meteo-city-autocomplete-input-with-city' tag='INPUT' type='text' class='small' placeholder='Localité, code postal...' aaname='' /&gt;" Guid="d50d8b05-d98a-455c-9c41-60919e436891" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAr5JREFUWEe1l0toE1EUhmetdSUiuJC40bYpjKjLttoWGSYRSgspbuKDCJqNLkRKV25iFuqm1GhRyK4PtJTQRZXqQt2IiA+ItBstFB8rERGRQqHH89+Zm04mt/N28XHzYM7/3TN37k00c9hsu1HLdNjkbMbKtcwtHqvM0s0F4zWPa8wfhuwR79fs75aYeaaK637MXhgFNF0s0Ewxx2OW6WV0wWQhBZCt8UUIFMUYFJYhoRmvZenDwzz9nblIHEQ0dWlDMF385eAbs8osQgICY+5CUZiaH6bvswUrOBiriQk8mzu9NevgWAL2vVYW9kO23G6zKsSLeAIRWu4Ga0GPJBCx5W4sAS6IR00Z5KbRcnXBsOCJCC6QQMvdQKDXVwCzTqjlbhoC2MGU4Q8eH6eVxf1EC0OqAnHxFnj6XKef7/cQfWwjereb6E2K6MVRS+bROVXBsEAg2yKAliN8o77LCpcs77DA6yRkrL1DCOAgEeFo+eeX+5qDVSQhAwE+qBoCTS0Pi5TBrZIyqlAnt89sUv7UoIbjVNnyqEAGXfHqBsLPm0S5zFmNZ/1KWSgO20mg7VcHiEYyYF0I8AVvWwokASRwO6SEnLUVLtgcyVz+fwISSCjCtwSWd9aVF8ZFdIAXdflYS7BECHx6sndFLEC5kpNi7gA57rcSIaAfPlkvX9PFlhtbBNfiUbybJlXLFZS09rTx9WCnST3d/RRbBC33mbULS6C9yyAQSUR+j5YHm7WTZoHtRJqCnOAzn4XmQ0nr6DJ+uwUkviIBFpoP3gISiAz0nRAi4rAKt9C8qAQSkEiR8Xw3fRlSFgxLOAEJRIwjBt3pM+OKVDRVQBggcq8/skhFbEQS8UQw6IpEFaoCIvfVIuseVMTfc8BhnS4GHVwBh9JGiccJpmqD1xP4XHK9xxzFFivBkduAf4A0MVlI/QPn4FFtFDojMgAAAABJRU5ErkJggg==" InformativeScreenshot="3aaad1bdc78dc74037482f411f7d8c18.jpg" Selector="&lt;html app='chrome.exe' title='Prévisions météo agricole des agriculteurs Paris - 75001 - Pleinchamp' /&gt;" Title="Prévisions météo agricole des agriculteurs Paris - 75001 - Pleinchamp" Url="https://www.pleinchamp.com/meteo/36-heures/75001-paris" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>
