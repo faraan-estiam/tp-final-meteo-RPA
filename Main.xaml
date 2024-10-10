@@ -102,12 +102,13 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1156,897" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1156,1101" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_nomVille" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_isRainingMF" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_isRainingGoogle" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_isRainingAW" />
+      <Variable x:TypeArguments="x:Boolean" Name="bool_isRainingPC" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -131,10 +132,16 @@
         <OutArgument x:TypeArguments="x:Boolean" x:Key="bool_isRaining">[bool_isRainingMF]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AccuWeather - Appeler le fichier de flux de travail (AccuWeather.xaml)" sap:VirtualizedContainerService.HintSize="416,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="AccuWeather.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AccuWeather - Appeler le fichier de flux de travail (AccuWeather.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="AccuWeather.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="str_city">[str_nomVille]</InArgument>
         <OutArgument x:TypeArguments="x:Boolean" x:Key="bool_IsRaining">[bool_isRainingAW]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PleinChamp - Appeler le fichier de flux de travail (PleinChamp.xaml)" sap:VirtualizedContainerService.HintSize="416,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="PleinChamp.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="str_city">[str_nomVille]</InArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="bool_IsRaining">[bool_isRainingPC]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
