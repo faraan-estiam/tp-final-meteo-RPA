@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -104,7 +104,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="953,1536" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="944,3134" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_nomVille" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_isRainingMF" />
@@ -119,42 +119,42 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="434,271" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Entrez le nom de la ville à rechercher" Title="RainingTool">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="518,271" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Entrez le nom de la ville à rechercher" Title="RainingTool">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[str_nomVille]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Google - Invoke Workflow File (Google.xaml)" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Google.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Google - Invoke Workflow File (Google.xaml)" sap:VirtualizedContainerService.HintSize="518,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Google.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="str_city">[str_nomVille]</InArgument>
         <OutArgument x:TypeArguments="x:Boolean" x:Key="bool_isRaining">[bool_isRainingGoogle]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MeteoFrance - Invoke Workflow File (MeteoFrance.xaml)" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="MeteoFrance.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MeteoFrance - Invoke Workflow File (MeteoFrance.xaml)" sap:VirtualizedContainerService.HintSize="518,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="MeteoFrance.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="str_city">[str_nomVille]</InArgument>
         <OutArgument x:TypeArguments="x:Boolean" x:Key="bool_isRaining">[bool_isRainingMF]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AccuWeather - Appeler le fichier de flux de travail (AccuWeather.xaml)" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="AccuWeather.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AccuWeather - Appeler le fichier de flux de travail (AccuWeather.xaml)" sap:VirtualizedContainerService.HintSize="518,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="AccuWeather.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="str_city">[str_nomVille]</InArgument>
         <OutArgument x:TypeArguments="x:Boolean" x:Key="bool_IsRaining">[bool_isRainingAW]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PleinChamp - Appeler le fichier de flux de travail (PleinChamp.xaml)" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="PleinChamp.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PleinChamp - Appeler le fichier de flux de travail (PleinChamp.xaml)" sap:VirtualizedContainerService.HintSize="518,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="PleinChamp.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="str_city">[str_nomVille]</InArgument>
         <OutArgument x:TypeArguments="x:Boolean" x:Key="bool_IsRaining">[bool_isRainingPC]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Tameteo - Invoke Workflow File (Tameteo.xaml)" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Tameteo.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Tameteo - Invoke Workflow File (Tameteo.xaml)" sap:VirtualizedContainerService.HintSize="518,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Tameteo.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="str_city">[str_nomVille]</InArgument>
         <OutArgument x:TypeArguments="x:Boolean" x:Key="bool_isRaining">[bool_isRainingTameteo]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[int32_chancesPrecipitations]</OutArgument>
       </Assign.To>
@@ -162,6 +162,88 @@
         <InArgument x:TypeArguments="x:Int32">[((If(bool_isRainingGoogle, 1, 0) + If(bool_isRainingPC, 1, 0) + If(bool_isRainingAW, 1, 0) + If(bool_isRainingTameteo, 1, 0) + If(bool_isRainingMF, 1, 0)) * 20)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Pluie détectée :&quot; &amp;Environment.NewLine +&#xD;&#xA;&quot;Google : &quot; + If(bool_isRainingGoogle, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Météo France : &quot; +If(bool_isRainingMF, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;AccuWeather : &quot; +If(bool_isRainingAW, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Plein Champ : &quot; +If(bool_isRainingPC, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Tameteo : &quot; +If(bool_isRainingTameteo, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Chances de précipitations : &quot; + int32_chancesPrecipitations.ToString()  + &quot;%&quot; &amp;Environment.NewLine +&#xD;&#xA;if(int32_chancesPrecipitations &gt; 50, &quot;Nous recommandons un parapuie !&quot;, &quot;Nous recommandons une casquette !&quot;)]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="518,117" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Pluie détectée :&quot; &amp;Environment.NewLine +&#xD;&#xA;&quot;Google : &quot; + If(bool_isRainingGoogle, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Météo France : &quot; +If(bool_isRainingMF, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;AccuWeather : &quot; +If(bool_isRainingAW, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Plein Champ : &quot; +If(bool_isRainingPC, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Tameteo : &quot; +If(bool_isRainingTameteo, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Chances de précipitations : &quot; + int32_chancesPrecipitations.ToString()  + &quot;%&quot; &amp;Environment.NewLine +&#xD;&#xA;if(int32_chancesPrecipitations &gt; 50, &quot;Nous recommandons un parapuie !&quot;, &quot;Nous recommandons une casquette !&quot;)]" />
+    <ui:Comment sap:VirtualizedContainerService.HintSize="518,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Petit bonus ;)" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Nouvel onglet" sap:VirtualizedContainerService.HintSize="518,1501" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a1cc3300-bcaa-41d1-b0c4-d439c215c74d" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484,1261" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If Condition="[int32_chancesPrecipitations &gt; 50]" sap:VirtualizedContainerService.HintSize="450,772" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,301" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Toutes nos catégories'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,241" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a1cc3300-bcaa-41d1-b0c4-d439c215c74d" Text="parapluie" Version="V4">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.amazon.fr/" CVScreenId="fed6ef01-a766-44dd-82d4-c79eed909e74" CvElementArea="540, 154, 843, 44" CvType="InputBox" DesignTimeRectangle="549, 158, 830, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='twotabsearchtextbox' tag='INPUT' type='text' class='nav-input nav-progressive-attribute' placeholder='Rechercher Amazon.fr' aaname='Rechercher Amazon.fr' /&gt;" Guid="25b67734-1ebd-4f8d-8313-ac7b9390de24" InformativeScreenshot="a92c7c05ea4aef2a3440af8b7dbb1ba2.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.fr : livres, DVD, jeux vidéo, musique, high-tech, informatique, jouets, vêtements, chaussures, sport, bricolage, maison, beauté, puériculture, épicerie et plus encore !' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target CVScreenId="fed6ef01-a766-44dd-82d4-c79eed909e74" CvTextArea="409, 169, 118, 15" CvTextArgument="Toutes nos catégories" CvType="Text" DesignTimeRectangle="410, 161, 117, 33" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='nav-search-label-id' tag='SPAN' type='' class='nav-search-label nav-progressive-content' aaname='Toutes nos catégories' check:innerText='Toutes nos catégories' /&gt;" Guid="4a3eb9f4-86b8-4043-9823-5af24d051519" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,301" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Toutes nos catégories'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,241" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="a1cc3300-bcaa-41d1-b0c4-d439c215c74d" Text="casquette" Version="V4">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.amazon.fr/" CVScreenId="fed6ef01-a766-44dd-82d4-c79eed909e74" CvElementArea="540, 154, 843, 44" CvType="InputBox" DesignTimeRectangle="549, 158, 830, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='twotabsearchtextbox' tag='INPUT' type='text' class='nav-input nav-progressive-attribute' placeholder='Rechercher Amazon.fr' aaname='Rechercher Amazon.fr' /&gt;" Guid="25b67734-1ebd-4f8d-8313-ac7b9390de24" InformativeScreenshot="a92c7c05ea4aef2a3440af8b7dbb1ba2.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.fr : livres, DVD, jeux vidéo, musique, high-tech, informatique, jouets, vêtements, chaussures, sport, bricolage, maison, beauté, puériculture, épicerie et plus encore !' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="fed6ef01-a766-44dd-82d4-c79eed909e74" CvTextArea="409, 169, 118, 15" CvTextArgument="Toutes nos catégories" CvType="Text" DesignTimeRectangle="410, 161, 117, 33" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='nav-search-label-id' tag='SPAN' type='' class='nav-search-label nav-progressive-content' aaname='Toutes nos catégories' check:innerText='Toutes nos catégories' /&gt;" Guid="4a3eb9f4-86b8-4043-9823-5af24d051519" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="450,211" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V4" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'chrome.exe Amazon.fr : …'" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a1cc3300-bcaa-41d1-b0c4-d439c215c74d" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.amazon.fr/s?k=casquette&amp;__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=T8EHLG073ZIZ&amp;sprefix=casquette%2Caps%2C107&amp;ref=nb_sb_noss_1" DesignTimeRectangle="671, 643, 92, 20" DesignTimeScaleFactor="1" Guid="a719b7d6-030c-4dd1-b856-0e4c9c09ec0b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAUCAYAAAAA5FpZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOzSURBVFhH7VbPSxtBFPZf8U/wX8jRo9CLV48lJy+CF0EPHkQKhp5CCYjQgxYKKgimIISAsMRDNOKvpGgwEsRIWLLEZPn6vZlsMhs3MdZ2hXYXPpJ5782bme/9mBnLfBhDhPAQER4yIsJDRkR4yIgIDxkR4SFjKOEX3zZQ/f4RlilfnMXt3izyajxBmySquxzHDRvCWqDdQQKlRb98EK6sItzLRKDuX8JQwu/K4FfD4/p4T55Ko2WnUeL/s8MKWiTp5rDI3xWltz6t4KFck4l6bsrvcxBKx5xTTgbq3g3xJGwnh9sg3W/iZcKfHKCuCVZyg3AhyTlgMNZ20OyQdXWQRf1wCRdfafcS4XOTOFubxtnyxHPC4zGcim5tEkfGHGthqjunazsqvPVWY/6qFXjrmTo5Kwq4M+0EgX7GkV+V/U7jZM6w7cOLhLeON/BoA052UssNwjOpLTh1By2ngvp2zD9fbXYI4SkGqa0D6jr08cT/HuHil+NWtUD/Uig7ar38fgFu22FwC2jaDux9v898pigbxY0nW6QfVPDwmbrtLFreXOaQe51UbVHO6NZYodyD7EO+pjWDzF4OruyJn8jd6g6uZI1APzHcXXNAHhplVv1T7nmQOhiB8FlYm1ketIjqMuUm4cMwlPAYqhVu9nypmyG9DNe6Zo6HVrpZBtxBfbO3H78vA/EEbJIhtjLOZxmA6hYJmQfzAvZupzXGNxiIIu55vyjC2Q69Kro5p2E38P0ZPshPEg3Vej27wRiJcCmXcolRlmj+EcKFRKDxoyfrEa51kt2NawGzj5UgtjrDqSuncbce0BaIn6dkpCT3yTQe6NLJsPIUMTortc8K3M7e+oPoa239hA/008nwdg2N4yRKC8ad14cRCedYosjyt60wCJd2ofuhxlT3FaReP7kcmix3Vfpdnx3Iuu0cynKv8PdW5imi2FpSpk99N7ye8GA/qoevJ/BwKUHQbczzaWJ0wokTKVH53kz4uPKNygZO1HgC5UuvlLXOLHORWSTOivcyx0eMDzM6s9mX3NP5jkwH2Dmc7lUFfcn/lwlnK+0+eQf50fszbcxkMvEqwr3DvJ1wYlkqhr7Yc90nvnbujYN6us6F6raZMV/GcMuyVWO53CjzPVcNqMuzb21rPe27pNEuqOfeUMLjK7C9PdbS6tIM9pNQ1a/2Jva0LXUD4MdQwv8+5Cnlf/b5dWbJahwti6zXYl6HCZxIGwh6Fr4KQX5G8/3OhP9/iAgPGRHhISMiPFSM4RcPTuvoCtESwgAAAABJRU5ErkJggg==" InformativeScreenshot="92651830adc386e42e04e8c3de051bbf.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.fr : casquette' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset Position="BottomRight" X="47" Y="145" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1042, 354, 974, 1087" BrowserType="Chrome" IconBase64="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" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="677f2e0785295abc6a79e89e8a69f0f4.png" Selector="&lt;html app='chrome.exe' url='https://www.amazon.fr' /&gt;" Title="Nouvel onglet" Url="https://www.amazon.fr" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>
