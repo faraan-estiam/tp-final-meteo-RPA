@@ -176,7 +176,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="c41ab224-3404-4e14-9871-caf13ee1f4db" Text="[city]" Version="V4">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="c41ab224-3404-4e14-9871-caf13ee1f4db" Text="[str_city]" Version="V4">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.accuweather.com/fr/world-weather" CVScreenId="4c58f785-fc5b-4fcf-9f85-94b8ec2f8fca" CvElementArea="682, 298, 538, 47" CvType="InputBox" DesignTimeRectangle="732, 312, 445, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='search-input' placeholder='Rechercher' aaname='' /&gt;" Guid="9f03f426-7880-4d4d-a043-a8847b1434cf" InformativeScreenshot="9758beb7dd85fa59db0104324aa04054.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Météo mondiale actuelle | AccuWeather' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
