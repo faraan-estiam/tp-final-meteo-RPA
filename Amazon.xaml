@@ -137,27 +137,6 @@
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
             <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="382,211" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V4" />
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'chrome.exe Amazon.fr : …'" sap:VirtualizedContainerService.HintSize="382,218" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a1cc3300-bcaa-41d1-b0c4-d439c215c74d" Version="V4">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://www.amazon.fr/s?k=parapluie&amp;crid=2YVM6K4KIP103&amp;sprefix=para%2Caps%2C61&amp;ref=nb_sb_ss_ts-doa-p_1_4" DesignTimeRectangle="384, 538, 257, 205" DesignTimeScaleFactor="1" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl parentid='search' tag='IMG' type='' class='s-image' aaname='Publicité sponsorisée - Amazon Basics Parapluie de voyage automatique, compact, résistant au vent, avec aération, noir, ta...' /&gt;" Guid="ad291588-87f0-4a87-915b-2fac67be0a8c" InformativeScreenshot="00f51dd92044fc75b1f224d24eb4c674.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.fr : parapluie' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target CVScreenId="1f60cc38-c464-4902-935e-f1df9dc2483c" CvTextArea="366, 400, 88, 18" CvTextArgument="Résultats" CvType="Text" DesignTimeRectangle="367, 397, 1488, 28" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' class='a-size-medium-plus a-spacing-none a-color-base a-text-bold' aaname='Résultats' check:innerText='Résultats' /&gt;" Guid="ef62907d-d015-4a2e-9096-180732d238f0" SearchSteps="FuzzySelector, CV" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NClick.Target>
-              <uix:NClick.VerifyOptions>
-                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                  <uix:VerifyExecutionOptions.Retry>
-                    <InArgument x:TypeArguments="x:Boolean" />
-                  </uix:VerifyExecutionOptions.Retry>
-                  <uix:VerifyExecutionOptions.Timeout>
-                    <InArgument x:TypeArguments="x:Double" />
-                  </uix:VerifyExecutionOptions.Timeout>
-                </uix:VerifyExecutionOptions>
-              </uix:NClick.VerifyOptions>
-            </uix:NClick>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
