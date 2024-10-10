@@ -102,13 +102,14 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1156,1101" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="953,1422" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_nomVille" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_isRainingMF" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_isRainingGoogle" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_isRainingAW" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_isRainingPC" />
+      <Variable x:TypeArguments="x:Boolean" Name="bool_isRainingTameteo" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -138,11 +139,18 @@
         <OutArgument x:TypeArguments="x:Boolean" x:Key="bool_IsRaining">[bool_isRainingAW]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PleinChamp - Appeler le fichier de flux de travail (PleinChamp.xaml)" sap:VirtualizedContainerService.HintSize="416,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="PleinChamp.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PleinChamp - Appeler le fichier de flux de travail (PleinChamp.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="PleinChamp.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="str_city">[str_nomVille]</InArgument>
         <OutArgument x:TypeArguments="x:Boolean" x:Key="bool_IsRaining">[bool_isRainingPC]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Tameteo - Invoke Workflow File (Tameteo.xaml)" sap:VirtualizedContainerService.HintSize="416,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Tameteo.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="str_city">[str_nomVille]</InArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="bool_isRaining">[bool_isRainingTameteo]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Pluie détectée :&quot; &amp;Environment.NewLine +&#xD;&#xA;&quot;Google : &quot; + If(bool_isRainingGoogle, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Météo France : &quot; +If(bool_isRainingMF, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;AccuWeather : &quot; +If(bool_isRainingAW, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Plein Champ : &quot; +If(bool_isRainingPC, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Tameteo : &quot; +If(bool_isRainingTameteo, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Chances de précipitations : A CALCULER&quot;]" />
   </Sequence>
 </Activity>
