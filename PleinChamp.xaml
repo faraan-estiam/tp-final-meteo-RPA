@@ -105,10 +105,14 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PleinChamp" sap:VirtualizedContainerService.HintSize="1156,2276" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PleinChamp" sap:VirtualizedContainerService.HintSize="1156,2545" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Weather" />
-      <Variable x:TypeArguments="x:String" Name="City" />
+      <Variable x:TypeArguments="x:String" Name="City">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Marseille</Literal>
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -161,13 +165,13 @@
         <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAbxSURBVFhHpZZtTFvnFcf9pWuypg3tmjVrGmLeEoMBG2PaJBDb2CkvyQJpvlXtFqRpmrSXT5s67a3pl0nTptXkhdAklEsCbZdG3VsrVe3AhhBCs3ZDi5ZAo21OA5hAOztNmrXhXj9n//M8j415SUe7I/30P+fh+vzPufcasC03YgF3zkzQ0zITrDLAyPshb3ImVEXTQS/NBDn3RmeClcZ0qHIvX6s/9v/HVIPbfjVU1com2kxcra2k6VovqBQM14sIVBpTAbddt/nsoTb2htlUGgWUWcYQ9dWAR0wFOPcgV8r1VMCj8AOfZ59uufzgyWES00a6sUfm8ww0cTZiuPZViLi/Qp1xrohNbV7m3ZiurXChUSzbIIO/QjDKUBlpE4r73BmdhE5ucys4V/X/HoI3h1EsvYFSjTaa9Kmm8W3aSDXPMJGmxkWTNS4BBaoer3ZhCMfSQ/Azh1FMGWU1z5ipxnIA1hq3kDUbaENlJHMxLmul49XljFDqii35LZnwucMZE4XI3khvo41Uzg1lzc1l7aIrOGO0KV3ZupAycWVLWVjbqnC/tNve/h3/nAmboqk2I7mNNpn57jfoxss9ZMYnKR3i5rskZl4la2QXWecqGcGaYn3LQ5JzHpx5BM5kTcNZ70PlS3uMbUYzjYUq1Fb6dknFxDKvr6YbJ3u0JVE8Kah/bBaYdGkqpU8xzNSLZL3jJ/OtChgxbgzhxjDQYbeqoajVXXAbu3M8LzxGzL4fBjO3io1Z39tSRuN1W+nWpTFp8JeYSd8yPqKqZ65R1T4N8qbwdYqOzsprxM0xst6ugZmLDZUOc85aDi3HEOVJGsG74H5hd4u7ZzdVANb+Jq80ZfCsBOv133TLxkein5AXhhmezso1R3ENh4h3K7PhMk1pljJOMXumpMXm7m42ALm6m4S7p1k8+Ys6ury5lN7b7BTMxGP1siFvV/l0UuLROse1eefv4C5xpC7sFdZZJ5lnS8hagtRwiWFzdTdHXScwwIkmTTO9useLIZwUe8RJN177nWy289kPqeJnyTlglNF0rutvdt6QnxFTJ4R5thhm2TgwlINS0NRQ8Yit/HhTsvz4LkpT1rWLth9spL/7yij2cIm4dWmUxuIWudF8MYnbkKTJJF7MTyZguBGGmiEJMSZInS1K2MqMr8JUImSu659/u5piVcWCN4lcnCXXTxNLA7P5dYLKoRH9QlpDRWSeKSSLQW4NaZV1gbCVdu6kUpiWGjuF1C6lj7Q30vkap2zSd/EWlaHpQtgoW7PP+zA0h3WmAEb5wjoDhgowTD7O5uABks7OHUKxk6BAqvjeUz5hxidoMpGi0p/8+zMxiscmProAkzwyB/Ogdgxhl7XKN3CdsJU8v+OvJR2NpNhBqGXuZH2+UQz2n5SbtHRcJycaO38MWD+Ful9dk59JTZ+CGRvlCnMwlyzJBrBecG4Oro/aHB0NRvGxRpqjQQ7gONYgOP/6a0/JZn/+1yyVwLwYKP1A5nP13HkvHhmH9fYWMk+vBw/B9CHBqnOyWE+vM2yOow0tIGPIyPpovQCsdPy8+ioe6rtJjh99QA6YSF0Izg/1/kdee228E4brYLYO2z6I/EGYK6y0Dqzba7MbgZziI/XJTUfqKRsH69E6wXi79ojR9/8hG//pwi0K/jJJm2CYzdeOfUjn/qlevInEu5QYLCFz4CuatTBdK9JqnX5A5hTNUX+WNz1X37rpuTraqJH5kTqRroHwGntE1/nfSgOOi5OWHIaZwEuaDr6m849bsN1aGD+QwWLt/7JUa2CNsPrXGNKcw9HeYN/Y/igxRVrTeRaisH27CPQ8Sa+MvkEX9R3hGL9+lYy/vUJP/P4H5O/wwWiNYkBr//0ytwbuFzIH2H7+f0ZFbaHWosPbKU1hG+ujxKaFhyWkNCT4ZxldwKk/FMHkS8pU6n3YVipZyFlTA/ct/k/ZHg7kFBwOxQraVOOCQyEqBKx8JpXP2ubX2Tze9TDM7hVm9F4YAlaAM605wormxLTl4sAQ9oK2YCzdMP9gkApA/qGgkHCu66XOL7+JZxxdjQHuAathuBqGUNSa2KJbvzB4iPwDtTHZ9EAt5R2sFQznafJY8XNWmR8I0ve7y8mM3I1N71EKrOgqmK4SnM9G7ob5ik83TwcPkbe/NgbIfiAg8vYHpMochvb9Kk9T076VLr+B5xxZxabQu+ZhRe6Kfbxc8+zAIM/YW2F+W/wYxi86Xs4ns28ljL4oMSMrBNdmBPStDGe+758n+G7khv3GhrCfNrT6Re6zPsF5btgn6+q2zTBZobmTzF4QuTNp9q5s/fj1z7H17QKD5Kz/9bYWDNCFAaLQJKCTp/A7PXJHItX7hZFU7wpjtu+OluVvbLP9F5lmWAkTeM7rAAAAAElFTkSuQmCC" InformativeScreenshot="eff269985228cc743fb1972ffb7717eb.png" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Nouvel onglet - Google Chrome' /&gt;" Title="Nouvel onglet - Google Chrome" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Pleinchamp - Prévisions météo, actualités agricoles, cours &amp; marchés" sap:VirtualizedContainerService.HintSize="458,1342" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="40b3ba96-9806-4484-bffd-e5e6bb58f284" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Pleinchamp - Prévisions météo, actualités agricoles, cours &amp; marchés" sap:VirtualizedContainerService.HintSize="458,1611" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="40b3ba96-9806-4484-bffd-e5e6bb58f284" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Faire" sap:VirtualizedContainerService.HintSize="416,1102" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Faire" sap:VirtualizedContainerService.HintSize="416,1371" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -177,7 +181,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.pleinchamp.com/decouvrir-pleinchamp-pro" CVScreenId="def4182b-4bf1-4197-9fce-b456642b5719" CvTextArea="941, 220, 71, 15" CvTextArgument="LA MÉTÉO" CvType="Text" DesignTimeRectangle="932, 204, 90, 50" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname=' La météo' tag='SPAN' type='' class='typography menu-link dark text-left text-with-arrow basic-link cursor-pointer header-navigation' check:innerText='LA MÉTÉO' /&gt;" Guid="703d16c6-7c69-40a8-9d48-f52bc9542955" InformativeScreenshot="178fd05838fbe6a17fbd04256efae5a7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Découvrez Pleinchamp Pro - Pleinchamp' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="def4182b-4bf1-4197-9fce-b456642b5719" CvTextArea="941, 220, 71, 15" CvTextArgument="LA MÉTÉO" CvType="Text" DesignTimeRectangle="941, 220, 71, 15" ElementType="Text" Guid="8436bccc-964b-4f03-b22d-0ed8b4832c9c" SearchSteps="CV" TargetType="ComputerVisionBased" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -196,10 +200,10 @@
             </uix:NClick>
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'DIV'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="40b3ba96-9806-4484-bffd-e5e6bb58f284" Text="[City]" Version="V4">
               <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="https://www.pleinchamp.com/meteo/36-heures/75001-paris" CVScreenId="d7006bf3-dce5-476f-b57f-7943a7f534f6" CvTextArea="473, 426, 167, 20" CvTextArgument="Localité, code postal.." CvType="Text" DesignTimeRectangle="448, 403, 282, 64" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl type='' parentid='__next' tag='DIV' class='input-box is-active' aaname='' /&gt;" Guid="b6a0c9a7-9fc5-4c32-aa6b-32fed5afcef5" InformativeScreenshot="ad828424492983f7da962d2366e97f44.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Prévisions météo agricole des agriculteurs Paris - 75001 - Pleinchamp' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="https://www.pleinchamp.com/meteo/36-heures/69001-lyon" CVScreenId="8cf5e5c5-0787-4104-af23-be3160f54710" CvElementArea="446, 402, 286, 66" CvType="InputBox" DesignTimeRectangle="473, 421, 208, 28" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='meteo-city-autocomplete-input-with-city' tag='INPUT' type='text' class='small' placeholder='Localité, code postal...' aaname='' /&gt;" Guid="040347b6-8efb-49ad-8110-034b8b9e7e4e" InformativeScreenshot="bdbf9f881c4387876ea37028baaf69e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Prévisions météo agricole des agriculteurs Lyon - 69001 - Pleinchamp' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target DesignTimeRectangle="448, 367, 406, 164" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl type='' parentid='__next' tag='DIV' class='meteo-home-summary-search plc-pt-basis' aaname='' /&gt;" Guid="09f979d1-247b-47aa-9d43-5bb60ec44c40" SearchSteps="FuzzySelector" />
+                      <uix:Target CVScreenId="8cf5e5c5-0787-4104-af23-be3160f54710" CvTextArea="446, 315, 112, 13" CvTextArgument="Accueil &gt; La météo" CvType="Text" DesignTimeRectangle="448, 313, 1024, 18" FuzzySelectorArgument="&lt;webctrl tag='OL' type='' class='flex align-center' aaname='' check:innerText='Accueil &amp;#xA;La météo' /&gt;" Guid="c1bd94a9-a07d-4041-99b7-3b619dccb409" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
@@ -215,17 +219,8 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Paris (75001)'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="40b3ba96-9806-4484-bffd-e5e6bb58f284" Version="V4">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://www.pleinchamp.com/meteo/36-heures/69001-lyon" CVScreenId="f2feac3c-c326-4956-baf6-203ac634e3d5" CvTextArea="447, 492, 245, 12" CvTextArgument="Connectez-vous pour retrouver vos favoris" CvType="Text" DesignTimeRectangle="473, 491, 354, 26" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;p' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='P' class='typography small dark text-left' aaname=' Paris (75001)' check:innerText='Paris (75001)' /&gt;" Guid="d42edaa0-7e9c-488e-87bc-b2d9731a0858" InformativeScreenshot="64dad3e3daab6f757c9bb60749960190.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Prévisions météo agricole des agriculteurs Lyon - 69001 - Pleinchamp' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target DesignTimeRectangle="473, 491, 354, 178" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='react-autowhatever-1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='react-autowhatever-1' tag='DIV' type='' class='react-autosuggest__suggestions-container react-autosuggest__suggestions-container--open' aaname='' /&gt;" Guid="82494d4c-41d6-4c62-b1d6-2c4467b69fcd" SearchSteps="FuzzySelector" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NClick.Target>
-              <uix:NClick.VerifyOptions>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="382,247" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(down)][u(hk)]" Version="V4">
+              <uix:NKeyboardShortcuts.VerifyOptions>
                 <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
                   <uix:VerifyExecutionOptions.Retry>
                     <InArgument x:TypeArguments="x:Boolean" />
@@ -234,8 +229,20 @@
                     <InArgument x:TypeArguments="x:Double" />
                   </uix:VerifyExecutionOptions.Timeout>
                 </uix:VerifyExecutionOptions>
-              </uix:NClick.VerifyOptions>
-            </uix:NClick>
+              </uix:NKeyboardShortcuts.VerifyOptions>
+            </uix:NKeyboardShortcuts>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="382,247" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V4">
+              <uix:NKeyboardShortcuts.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NKeyboardShortcuts.VerifyOptions>
+            </uix:NKeyboardShortcuts>
             <uix:NGetText DisplayName="Get Text 'Pluie'" sap:VirtualizedContainerService.HintSize="382,189" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="40b3ba96-9806-4484-bffd-e5e6bb58f284" TextString="[Weather]" Version="V4">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.pleinchamp.com/meteo/36-heures/75001-paris" CVScreenId="eb2ecbde-737a-44e9-946f-2d491e91f854" CvTextArea="974, 476, 98, 35" CvType="AnyWordGroup" DesignTimeRectangle="974, 475, 222, 42" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='__next' tag='DIV' type='' class='typography h2 dark text-left local-meteo-weather-label plc-mb-xs' /&gt;" Guid="13531327-a47b-4260-a4fa-7e4f0322617d" InformativeScreenshot="7fd3e56dafa3c1e3b6f092eddd8a6cf7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Prévisions météo agricole des agriculteurs Paris - 75001 - Pleinchamp' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
