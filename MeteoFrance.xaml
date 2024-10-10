@@ -1,7 +1,7 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="MeteoFrance" this:MeteoFrance.city="Paris" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="MeteoFrance" this:MeteoFrance.str_city="Paris" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="city" Type="InArgument(x:String)" />
-    <x:Property Name="isRaining" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="str_city" Type="InArgument(x:String)" />
+    <x:Property Name="bool_isRaining" Type="OutArgument(x:Boolean)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -109,7 +109,7 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="MeteoFrance" sap:VirtualizedContainerService.HintSize="953,1271" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="weather" />
+      <Variable x:TypeArguments="x:String" Name="str_weather" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -128,7 +128,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'combo box Effectuez une…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="36fa4824-acfd-44ea-b428-af335fb9192b" Text="[city + &quot; site:meteofrance.com &quot;]" Version="V4">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'combo box Effectuez une…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="36fa4824-acfd-44ea-b428-af335fb9192b" Text="[str_city + &quot; site:meteofrance.com &quot;]" Version="V4">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.google.com/" CVScreenId="38dd3e27-79cb-4f56-8e34-d648e8a49adf" CvElementArea="193, 513, 586, 51" CvType="InputBox" DesignTimeRectangle="243, 516, 443, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='APjFqb' tag='TEXTAREA' type='' class='gLFyf' aaname='Rechercher' /&gt;" Guid="f12cf5a8-e108-451c-afad-a1959e47bdf7" InformativeScreenshot="7dacb0c5758c6f3e6a3bcde4cc644314.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
               </uix:NTypeInto.Target>
@@ -139,7 +139,7 @@
                 <uix:TargetAnchorable BrowserURL="https://www.google.com/" CVScreenId="78fe2726-4e1a-4d1f-b2fa-f3a2a5670087" CvElementArea="497, 590, 141, 39" CvTextArea="515, 603, 106, 13" CvTextArgument="J'ai de la chance" CvType="Button" DesignTimeRectangle="499, 592, 138, 36" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gbqfbb' tag='INPUT' type='submit' class='' aaname='J&amp;apos;ai de la chance' check:text='J&amp;apos;ai de la chance' /&gt;" Guid="e105483f-2198-43c1-85dc-56e349f6340e" InformativeScreenshot="638d1214404ae7d178b5f1ec409996e5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NGetText DisplayName="Get Text 'Pluie forte'" sap:VirtualizedContainerService.HintSize="382,182" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="36fa4824-acfd-44ea-b428-af335fb9192b" TextString="[weather]" Version="V4">
+            <uix:NGetText DisplayName="Get Text 'Pluie forte'" sap:VirtualizedContainerService.HintSize="382,182" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="36fa4824-acfd-44ea-b428-af335fb9192b" TextString="[str_weather]" Version="V4">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://meteofrance.com/previsions-meteo-france/paris/75000" CVScreenId="659ae6c0-87a3-449a-ac6e-f0da22465a3b" CvTextArea="442, 660, 72, 14" CvType="AnyWordGroup" DesignTimeRectangle="385, 561, 187, 14" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='atmogramme_slider' tag='P' type='' class='' /&gt;" Guid="2a7557df-8a73-4615-b1c8-29d48cf68805" InformativeScreenshot="8efecf63a3de89d88f502b0cf59c0510.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='ZdOdv6kh' title='METEO PARIS par Météo-France - Prévisions Météo gratuites pour aujourd’hui, demain et à 15 jours.' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
               </uix:NGetText.Target>
@@ -153,10 +153,10 @@
     </uix:NApplicationCard>
     <Assign sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
-        <OutArgument x:TypeArguments="x:Boolean">[isRaining]</OutArgument>
+        <OutArgument x:TypeArguments="x:Boolean">[bool_isRaining]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:Boolean">[weather.Contains("Pluie")]</InArgument>
+        <InArgument x:TypeArguments="x:Boolean">[str_weather.Contains("Pluie")]</InArgument>
       </Assign.Value>
     </Assign>
   </Sequence>
