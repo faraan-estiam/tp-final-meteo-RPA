@@ -104,7 +104,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="944,2304" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1156,2304" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_nomVille" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_isRainingMF" />
@@ -162,7 +162,7 @@
         <InArgument x:TypeArguments="x:Int32">[((If(bool_isRainingGoogle, 1, 0) + If(bool_isRainingPC, 1, 0) + If(bool_isRainingAW, 1, 0) + If(bool_isRainingTameteo, 1, 0) + If(bool_isRainingMF, 1, 0)) * 20)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,117" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Pluie détectée :&quot; &amp;Environment.NewLine +&#xD;&#xA;&quot;Google : &quot; + If(bool_isRainingGoogle, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Météo France : &quot; +If(bool_isRainingMF, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;AccuWeather : &quot; +If(bool_isRainingAW, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Plein Champ : &quot; +If(bool_isRainingPC, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Tameteo : &quot; +If(bool_isRainingTameteo, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Chances de précipitations : &quot; + int32_chancesPrecipitations.ToString()  + &quot;%&quot; &amp;Environment.NewLine +&#xD;&#xA;if(int32_chancesPrecipitations &gt; 50, &quot;Nous recommandons un parapuie !&quot;, &quot;Nous recommandons une casquette !&quot;)]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,117" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Pluie détectée à : &quot; + str_nomVille &amp;Environment.NewLine +&#xD;&#xA;&quot;Google : &quot; + If(bool_isRainingGoogle, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Météo France : &quot; +If(bool_isRainingMF, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;AccuWeather : &quot; +If(bool_isRainingAW, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Plein Champ : &quot; +If(bool_isRainingPC, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Tameteo : &quot; +If(bool_isRainingTameteo, &quot;oui&quot;, &quot;non&quot;) &amp;Environment.NewLine +&#xD;&#xA;&quot;Chances de précipitations : &quot; + int32_chancesPrecipitations.ToString()  + &quot;%&quot; &amp;Environment.NewLine +&#xD;&#xA;if(int32_chancesPrecipitations &gt; 50, &quot;Nous recommandons un parapuie !&quot;, &quot;Nous recommandons une casquette !&quot;)]" />
     <ui:Comment sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Petit bonus ;)" />
     <If Condition="[int32_chancesPrecipitations &gt; 50]" sap:VirtualizedContainerService.HintSize="450,671" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
