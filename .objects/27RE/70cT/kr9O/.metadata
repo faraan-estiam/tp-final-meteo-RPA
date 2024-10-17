@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Nouvel onglet",
+  "Type": "Screen",
+  "Id": "kr9OnUM8PkCIaQMh5l-CdQ",
+  "Reference": "Q8yMi1UmOkydNKF2SuVPkg/kr9OnUM8PkCIaQMh5l-CdQ",
+  "ParentRef": "Q8yMi1UmOkydNKF2SuVPkg/70cTYZWKKk6UNLrNXSA8MA",
+  "Created": "2024-10-17T09:23:06.7116074Z",
+  "Updated": "2024-10-17T09:23:06.7116074Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="NsYdSD0LrkioS6pMBsWdVA" Reference="Q8yMi1UmOkydNKF2SuVPkg/j9Fz5T0Bt0-CIlU_Xxy_9w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.pleinchamp.com/decouvrir-pleinchamp-pro" CVScreenId="def4182b-4bf1-4197-9fce-b456642b5719" CvTextArea="941, 220, 71, 15" CvTextArgument="LA MÉTÉO" CvType="Text" DesignTimeRectangle="468, 196, 75, 50" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname=' La météo' tag='SPAN' type='' class='typography menu-link dark text-left text-with-arrow basic-link cursor-pointer header-navigation' check:innerText='LA MÉTÉO' /&gt;" Guid="703d16c6-7c69-40a8-9d48-f52bc9542955" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Découvrez Pleinchamp Pro - Pleinchamp' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="96343e76-bac8-4fa1-bf0d-c9dba406facf" CvTextArea="477, 220, 49, 14" CvTextArgument="MÉTÉO" CvType="Text" DesignTimeRectangle="477, 220, 50, 14" ElementType="Text" Guid="023ca24a-ffb8-4639-b375-c77d7083de84" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="a67a796957ee45e4bd6fc18f144ab0a9.png" xmlns="">0-Qzi6MoTN0KJWoqcL2VyHA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

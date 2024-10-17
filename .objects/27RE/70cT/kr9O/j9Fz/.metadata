@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Click 'La météo'",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "j9Fz5T0Bt0-CIlU_Xxy_9w",
+  "Reference": "Q8yMi1UmOkydNKF2SuVPkg/j9Fz5T0Bt0-CIlU_Xxy_9w",
+  "ParentRef": "Q8yMi1UmOkydNKF2SuVPkg/kr9OnUM8PkCIaQMh5l-CdQ",
+  "Created": "2024-10-17T09:23:06.9602015Z",
+  "Updated": "2024-10-17T09:23:06.9602015Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
